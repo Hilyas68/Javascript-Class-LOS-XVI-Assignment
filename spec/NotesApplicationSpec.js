@@ -59,6 +59,11 @@ it("edit method should be called", function () {
       expect(notesApplication.edit).toHaveBeenCalled();
     });
 
+it("search method should return a search value", function () {
+      spyOn(notesApplication,"search");
+      notesApplication.search();
+      expect(notesApplication.search(this.search_text)).toEqual(this.search_text);
+    });
 
 });
 
