@@ -28,6 +28,17 @@ it("Create a method createNotes ", function(){
   expect(notesApplication.createNotes).toHaveBeenCalled();
 });
 
+it("listNotes should be called", function () {
+      spyOn(note_application,"listNotes");
+      note_application.listNotes();
+      expect(note_application.listNotes).toHaveBeenCalled();
+    }); 
+
+it("get method should be called", function () {
+      spyOn(note_application,"get");
+      note_application.get(1);
+      expect(note_application.get).toHaveBeenCalled();
+    }); 
 
 });
 
