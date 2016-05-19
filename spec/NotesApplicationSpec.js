@@ -23,21 +23,22 @@ it("he is awesome", function(){
 
 
 it("Create a method createNotes ", function(){
-  notesApplication.createNotes();
+  
   spyOn(notesApplication,"createNotes");
+  notesApplication.createNotes();
   expect(notesApplication.createNotes).toHaveBeenCalled();
 });
 
 it("listNotes should be called", function () {
-      spyOn(note_application,"listNotes");
-      note_application.listNotes();
-      expect(note_application.listNotes).toHaveBeenCalled();
+      spyOn(notesApplication,"listNotes");
+      notesApplication.listNotes();
+      expect(notesApplication.listNotes).toHaveBeenCalled();
     }); 
 
 it("get method should be called", function () {
-      spyOn(note_application,"get");
-      note_application.get(1);
-      expect(note_application.get).toHaveBeenCalled();
+      spyOn(notesApplication,"getNote_id");
+      notesApplication.getNote_id(1);
+      expect(notesApplication.getNote_id).toHaveBeenCalled();
     }); 
 
 });
