@@ -9,13 +9,6 @@ describe("Create a NoteApplication:", function() {
     //song = new Song();
   });
 
-  //it("should be able to create notes ", function() {
-   // expect(notesApplication.createNotes("Blah")).toContain("Blah");
-   // expect(notesApplication.currentlyPlayingSong).toEqual(song);
-
-    //demonstrates use of custom matcher
-   // expect(player).toBePlaying(song);
-  //});
 
 it("he is awesome", function(){
   expect(notesApplication.autor).toEqual("Hassan");
