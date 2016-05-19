@@ -1,74 +1,62 @@
 
-function NotesApplication() {
-}
-
+function NotesApplication(autor) {
 
 //var NotesApplication = function (autor) {
-   // this.autor = autor;
-  
-  //Empty List/Array
-	//var notes = [];
+    this.autor = autor;
+    this.notes = [];
  
   //function to create notes
-  //this.createNotes = function(note_content){
-  //	notes.append(this.note_content);	
-  //}
-
-//function to create notes
-  NotesApplication.prototype.createNotes = function(note_content) {
-  this.note_content = note_content;
-  console.log("Good");
-  return "Good"
-  
-};
+  this.createNotes = function(note_content){
+    notes.push(note_content);  
+  };
 
   //List notes
-  this.listNotes = function(note_id , note_content, note_autor){
-  	this.note_id = notes.indexOf(note_content);
-  	this.note_content = notes[note_content];
-  	this.note_autor = autor; 
+  this.listNotes = function(){
+    for(var i = 0; i < notes.length; i++){
+          
+      //output the list
+    console.log('Note ID: ' + i);
+    
+    console.log (notes[i]);
+    
+    console.log('By Author ' + autor);
+    }
   
-  //output the list
-  	console.log('Note ID: ' + this.note_id);
-  	
-  	console.log (this.note_content);
-  	
-  	console.log('By Author ' + autor);
-  	
-  }
-  //get Note ID from a list
+    
+  };
+  
+  //get NoteID
   this.getNote_id = function(note_id){
-  	this.note_id = notes.indexOf(this.note_content);
-  	
-	 console.log('Showing results for search');
-	 console.log('Note ID: ' + this.note_id);
+    this.note_id = notes.indexOf(note_id);
+    
+   console.log('Showing results for search');
+   console.log('Note ID: ' + this.note_id);
   
-  	 console.log (this.note_content);
-  	
-  	 console.log('By Author ' + autor);
-  }
+     console.log (this.note_content);
+    
+     console.log('By Author ' + autor);
+  };
   
-  //Searching for items list content 
   this.search = function(search_text){
-  	this.search_text = notes.search(search_text);
-  	return this.search_text
-  }	
+    this.search_text = notes.search(search_text);
+    return this.search_text
+  };
   
-  //deleting item from the list
   this.delete = function(note_id){
-  	this.note_id = notes.indexOf(note_content);
-  	delete notes[this.note_id];
-  }
+    this.note_id = notes.indexOf(note_content);
+    delete notes[this.note_id];
+  };
   
-  //editing a item list 
   this.edit = function(note_id, new_content){
-  	this.note_id = notes.indexOf(note_content);
+    this.note_id = notes.indexOf(note_content);
    notes[this.note_id] = new_content
-  }
   
 };
 
-//Contructor 
-var notes = new NotesApplication("");
+}
 
+//Contructor 
+var info = new NotesApplication("HAssan", ["hass", "good", "better"]);
+info.createNotes("Blah");
+info.listNotes();
 
