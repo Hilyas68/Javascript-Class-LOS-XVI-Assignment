@@ -6,12 +6,13 @@ function NotesApplication(autor) {
     this.notes = [];
  
   //function to create notes
-  this.createNotes = function(note_content){
+  this.create = function(note_content){
     notes.push(note_content);  
   };
 
   //List notes
   this.listNotes = function(){
+
     for(var i = 0; i < notes.length; i++){
           
       //output the list

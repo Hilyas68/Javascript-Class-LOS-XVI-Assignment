@@ -15,11 +15,11 @@ it("he is awesome", function(){
 });
 
 
-it("Create a method createNotes ", function(){
+it("Create a method create Notes ", function(){
   
-  spyOn(notesApplication,"createNotes");
-  notesApplication.createNotes();
-  expect(notesApplication.createNotes).toHaveBeenCalled();
+  spyOn(notesApplication,"create");
+  notesApplication.create();
+  expect(notesApplication.create).toHaveBeenCalled();
 });
 
 it("listNotes should be called", function () {
