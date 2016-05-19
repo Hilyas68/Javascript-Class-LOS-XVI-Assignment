@@ -53,6 +53,13 @@ it("delete method should be called", function () {
       expect(notesApplication.delete).toHaveBeenCalled();
     });
 
+it("edit method should be called", function () {
+      spyOn(notesApplication,"edit");
+      notesApplication.edit();
+      expect(notesApplication.edit).toHaveBeenCalled();
+    });
+
+
 });
 
 
