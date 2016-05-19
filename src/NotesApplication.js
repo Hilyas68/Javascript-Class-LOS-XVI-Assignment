@@ -43,9 +43,9 @@ function NotesApplication(autor) {
   };
   
   this.delete = function(note_id){
-    this.note_id = notes.indexOf(note_content);
-    delete notes[this.note_id];
-  };
+    this.note_id = notes.indexOf(note_id);
+    delete note_id;
+  };    
   
   this.edit = function(note_id, new_content){
     this.note_id = notes.indexOf(note_content);

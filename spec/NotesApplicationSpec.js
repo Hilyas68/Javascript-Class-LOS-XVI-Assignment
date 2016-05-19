@@ -41,6 +41,18 @@ it("get method should be called", function () {
       expect(notesApplication.getNote_id).toHaveBeenCalled();
     }); 
 
+it("search method should be called", function () {
+      spyOn(notesApplication,"search");
+      notesApplication.search();
+      expect(notesApplication.search).toHaveBeenCalled();
+    });
+
+it("delete method should be called", function () {
+      spyOn(notesApplication,"delete");
+      notesApplication.delete();
+      expect(notesApplication.delete).toHaveBeenCalled();
+    });
+
 });
 
 
