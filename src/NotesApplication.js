@@ -1,13 +1,27 @@
-var NotesApplication = function (autor) {
-  this.autor = autor;
+
+function NotesApplication() {
+}
+
+
+//var NotesApplication = function (autor) {
+   // this.autor = autor;
   
-  //List/Array
-	var notes = [];
+  //Empty List/Array
+	//var notes = [];
  
   //function to create notes
-  this.createNotes = function(note_content){
-  	notes.append(this.note_content);	
-  }
+  //this.createNotes = function(note_content){
+  //	notes.append(this.note_content);	
+  //}
+
+//function to create notes
+  NotesApplication.prototype.createNotes = function(note_content) {
+  this.note_content = note_content;
+  console.log("Good");
+  return "Good"
+  
+};
+
   //List notes
   this.listNotes = function(note_id , note_content, note_autor){
   	this.note_id = notes.indexOf(note_content);
